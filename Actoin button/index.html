@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actoin Button</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dcee8f2865.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="action" onclick="actoinToggle()">
+        <span>+</span>
+        <ul>
+            <li><i class="fa fa-facebook"></i> Share on Facebood</li>
+            <li><i class="fa fa-twitter"></i>Share on Twitter</li>
+            <li><i class="fa fa-instagram"></i>Share on Instagram</li>
+            <li><i class="fa fa-telegram"></i>Share on Telegram</li>
+            <li><i class="fa fa-linkedin"></i>Share on Linkedin</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function actoinToggle(){
+            var action = document.querySelector(".action");
+            action.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>

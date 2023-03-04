@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- form begin -->
+        <form action="/" >
+
+            <!-- title form -->
+            <h3>Log In</h3>
+            
+            <!-- end of title form -->
+
+            <div class="input_box">
+                <span>Username</span>
+                <div class="box">
+                    <div class="icon"><ion-icon name="person-add"></ion-icon></div>
+                    <input type="text" class="input">
+                </div>
+            </div>
+
+            <!-- box password -->
+            <div class="input_box ">
+                <span>Password</span>
+                <div class="box">
+                    <div class="icon"><ion-icon name="unlock"></ion-icon></div>
+                    <input type="password" class="input" spellcheck="false" required>
+                    <i class="uil uil-eye-slash eye toggle"></i>
+                </div>
+            </div>
+            <!-- end of box password -->
+
+            <label for="label">
+                <input type="checkbox" id="label"> Remember me
+            </label>
+
+            <!-- click Submit -->
+
+           <div class="input_box">
+                <div class="box">
+                    <input type="submit" value="Log in">
+                </div>
+           </div>
+
+           <!-- end of click Submit -->
+
+           <!-- link remember me -->
+           <a href="#" class="forgot">Forget password</a>
+           <!-- end of link -->
+        </form>
+        <!-- end of form begin -->
+    </div>
+
+    <!-- script for icon -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- end of script icon -->
+
+    <!-- script toggle for password -->
+    <script>
+
+
+        const toggle = document.querySelector(".toggle"),
+              input = document.querySelector('.input');
+
+              toggle.addEventListener('click',() =>{
+                if(input.type ==='password'){
+                    input.type = 'text';
+                    toggle.classList.replace("uil-eye-slash","uil-eye");
+                }else{
+                    input.type = "password";
+                    toggle.classList.replace("uil-eye","uil-eye-slash");
+                }
+            })
+    </script>
+    <!-- end of script toggle for password -->
+</body>
+</html>

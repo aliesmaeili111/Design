@@ -1,0 +1,85 @@
+*,*::after,*::before{
+    box-sizing: border-box  ;
+}
+
+body{
+    font-family: sans-serif;
+    color: #301930;
+    font-size: 42px;
+    background-color: #F3EdF3;
+}
+
+.container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align:center ;
+    align-items: center;
+    padding: 20px;
+}
+
+form{
+    display:-webkit-box;
+    display:flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+label{
+    display:-webkit-box;
+    display:flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+label input{
+    position: absolute;
+    left: -9999px;
+}
+
+
+label span{
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 90px;
+    transition: 0.25s ease;
+}
+
+label span:hover{
+    background-color: #EBE1EB
+}
+
+label span::before{
+    display:-webkit-box;
+    display:flex;
+    flex-shrink: 0;
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    transition: 0.25 ease;
+    box-shadow: inset 0px 0px 0px 2px #844685;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+label input:checked + span{
+    background-color: #EBE1EB;
+}
+label input:checked + span::before{
+    box-shadow: inset 0px 0px 0px 8px #844685;
+}

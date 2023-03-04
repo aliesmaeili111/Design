@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining link</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dcee8f2865.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="label">
+            Joining Link
+        </div>
+
+        <div class="copy-text">
+            <input type="text" class="text" value="https://www.google.com/0.0.1.56">
+            <button>
+                <i class="fa fa-clone"></i>
+            </button>
+        </div>
+        
+    </div>
+
+    <script>
+        let copyText = document.querySelector('.copy-text');
+        copyText.querySelector('button').addEventListener('click',function(){
+            let input = copyText.querySelector('input.text');
+            input.select();
+            document.execCommand('copy');
+            copyText.classList.add('active');
+            window.getSelection().removeAllRanges();
+            setTimeout(function(){
+                copyText.classList.remove('active');
+            },2500)
+        });
+    </script>
+
+</body>
+</html>

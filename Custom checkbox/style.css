@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f5f5f5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container h2{
+    font-size: 30px;
+    color: #888;
+    text-align: center;
+}
+
+.container .list{
+    margin-top: 40px ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 500px;
+}
+.container .list .form-element{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.container .list .form-element input{
+    display:none ;
+}
+.container .list .form-element label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background: #fff;
+    box-shadow: 0px 5px 20px 2px rgba(0,0,0,0);
+    transition: all 200ms ease-in-out;
+    border-radius: 5px;
+}
+.container .list .form-element .icon{
+    margin-top: 10px;
+    font-size: 30px;
+    color: #555;
+    transition: all 200ms ease-in-out;
+}
+.container .list .form-element .title{
+    font-size: 15px;
+    color: #555;
+    padding: 5px 0px;
+    transition: all 200ms ease-in-out;
+}
+.container .list .form-element label::before{
+    content: '1';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    left: 8px;
+    background: #0d0df1;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 200ms ease-in-out;
+}
+.container .list .form-element input:checked + label::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.container .list .form-element input:checked + label .icon,
+.container .list .form-element input:checked + label .title
+{
+    color: #0d0df1;
+}
+.container .list .form-element input:checked + label{
+    border: 2px solid #0d0df1;
+}

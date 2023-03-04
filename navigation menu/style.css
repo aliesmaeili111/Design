@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #7d2ae8;
+}
+.navbar{
+    position: relative;
+    width: 500px;
+    height: 120px;
+    background: #fff;
+    border-radius:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.navbar ul{
+    position: relative;
+    display: flex;
+}
+.navbar ul li{
+    position: relative;
+    list-style-type: none;
+}
+.navbar ul li a{
+    position: relative;
+    height: 120px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.navbar ul li a i{
+    position: absolute;
+    font-size: 34px;
+    color: #7d2ae8;
+}
+.navbar ul li a i.activeicon{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+    transition-delay: 0.2s;
+}
+.navbar ul li.active a i{
+    opacity: 1;
+    pointer-events: auto;
+}
+.navbar ul .indicator{
+    position: absolute;
+    bottom: -19px;
+    left:34px;
+    height: 36px;
+    width: 25px;
+    background: #7d2ae8;
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+ul .indicator::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ae8;
+}
+ul .indicator::after{
+    content: '';
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    height: 22px;
+    width: 20px;
+    background: transparent;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 #7d2ae8;
+}
